@@ -29,6 +29,8 @@ Including the hardware design files of the magnetic encoder.
 + Config your compile environment https://docs.px4.io/main/en/dev_setup/dev_env.html
 + Build the code and upload to Pixhawk 4 mini through USB connection
 ```
+cd PULSAR
+git submodule update --init
 cd 3-PX4_Firmware/PULSAR_PX4
 make px4_fmu-v5_default upload
 ```
