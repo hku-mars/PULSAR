@@ -98,12 +98,12 @@ roslaunch fastlio mapping_avia_indoor.launch  # indoor environment
 roslaunch fastlio mapping_avia_outdoor.launch  # outdoor environment
 ```
 
-In addition, [Point-LIO](https://github.com/hku-mars/Point-LIO) is more suitable for PULSAR since it can handle higer self-rotation rate.
+In addition, [Point-LIO](https://github.com/hku-mars/Point-LIO) is more suitable for PULSAR since it can handle higher self-rotation rate.
 
 
 ### 4.2 Planner
 The new version of the planner used in PULSAR is in https://github.com/hku-mars/dyn_small_obs_avoidance.
-Other planners can also be used for PULSAR if they can receive the odometry and point clouds provided by FAST-LIO2.
+Other planners can also be used for PULSAR if they can receive the odometry and point clouds provided by FAST-LIO2, Point-LIO, or other LIOs.
 
 
 ### 4.3 Incremental kd-forest
