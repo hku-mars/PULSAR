@@ -2,11 +2,11 @@
 
 ## A self-rotating, single-actuated UAV with extended sensor field of view for autonomous navigation
 
-**Paper Link**: https://arxiv.org/
+**Paper Link**:
 
 Click for the overview video.
 
-[![Video Demo](./img/out.png)](https://www.youtube.com/watch?v=eDkwGXCea7w)
+<!-- [![Video Demo](./img/out.png)](https://www.youtube.com/watch?v=eDkwGXCea7w) -->
 
 ## 1 Structure CAD files
 
