@@ -1,0 +1,38 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\lawrence chen\OneDrive - connect.hku.hk\Desktop\MaRSµçÂ·°å\Magnet_Encoder\V3\V1.PcbDoc
+Date     : 2022/6/7
+Time     : 14:39:06
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+   Violation between Clearance Constraint: (0.105mm < 0.254mm) Between Pad J1-0(4.325mm,18.969mm) on Top Layer And Track (-5.543mm,20.701mm)(5.56mm,20.701mm) on Keep-Out Layer 
+   Violation between Clearance Constraint: (0.105mm < 0.254mm) Between Pad J1-0(-4.325mm,18.969mm) on Top Layer And Track (-5.543mm,20.701mm)(5.56mm,20.701mm) on Keep-Out Layer 
+Rule Violations :2
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=5mm) (Preferred=1mm) (All)
+Rule Violations :0
+
+Processing Rule : Routing Layers(All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=0.3mm) (MaxHoleWidth=3mm) (PreferredHoleWidth=0.5mm) (MinWidth=0.5mm) (MaxWidth=5mm) (PreferedWidth=1mm) (All)
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.254mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.381mm) (Max=0.381mm) (Prefered=0.381mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+
+Violations Detected : 2
+Waived Violations : 0
+Time Elapsed        : 00:00:01

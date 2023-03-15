@@ -1,0 +1,71 @@
+<launch>
+<!-- Launch file for Livox AVIA LiDAR -->
+	<arg name="lvx_file_path" default="livox_test.lvx"/>
+	<arg name="bd_list" default="100000000000000"/>
+	<arg name="xfer_format" default="1"/>
+	<arg name="multi_topic" default="0"/>
+	<arg name="data_src" default="0"/>
+	<arg name="publish_freq" default="30.0"/>
+	<arg name="output_type" default="0"/>
+	<arg name="rviz_enable" default="false"/>
+	<arg name="rosbag_enable" default="false"/>
+	<arg name="cmdline_arg" default="$(arg bd_list)"/>
+	<arg name="msg_frame_id" default="livox_frame"/>
+	<arg name="lidar_bag" default="true"/>
+	<arg name="imu_bag" default="true"/>
+
+	<param name="xfer_format" value="$(arg xfer_format)"/>
+	<param name="multi_topic" value="$(arg multi_topic)"/>
+	<param name="data_src" value="$(arg data_src)"/>
+	<param name="publish_freq" type="double" value="$(arg publish_freq)"/>
+	<param name="output_data_type" value="$(arg output_type)"/>
+	<param name="cmdline_str" type="string" value="$(arg bd_list)"/>
+	<param name="cmdline_file_path" type="string" value="$(arg lvx_file_path)"/>
+	<param name="user_config_path" type="string" value="$(find livox_ros_driver)/config/livox_lidar_config.json"/>
+	<param name="frame_id" type="string" value="$(arg msg_frame_id)"/>
+	<param name="enable_lidar_bag" type="bool" value="$(arg lidar_bag)"/>
+	<param name="enable_imu_bag" type="bool" value="$(arg imu_bag)"/>
+
+	<node name="livox_lidar_publisher" pkg="livox_ros_driver"
+	      type="livox_ros_driver_node" required="true"
+	      output="screen" args="$(arg cmdline_arg)"/>
+
+	<group if="$(arg rviz_enable)">
+		<node name="rviz" pkg="rviz" type="rviz" respawn="true"
+				args="-d $(find livox_ros_driver)/config/display_lidar_points.rviz"/>
+    </group>
+
+	<group if="$(arg rosbag_enable)">
+    	<node pkg="rosbag" type="record" name="record" output="screen"
+          		args="-a"/>
+    </group>
+    
+        
+<!-- Launch file for Livox AVIA LiDAR -->
+
+	<arg name="rviz" default="false" />
+
+	<rosparam command="load" file="$(find fast_lio)/config/avia.yaml" />
+
+	<param name="feature_extract_enable" type="bool" value="0"/>
+	<param name="point_filter_num" type="int" value="2"/>
+	<param name="max_iteration" type="int" value="0" />
+	<param name="filter_size_surf" type="double" value="0.7" />
+	<param name="filter_size_map" type="double" value="0.7" />
+	<param name="cube_side_length" type="double" value="2000" />
+	
+	<param name="runtime_pos_log_enable" type="bool" value="1" />
+	<param name="scan_publish_enable" type="bool" value="0" />
+	<param name="dense_map_enable" type="bool" value="0" />
+	<param name="pcd_save_enable" type="bool" value="0" />
+	
+	<!-- <remap from="/aft_mapped_to_init" to="/mavros/odometry/out" /> -->
+	
+	<remap from="/fastlio/geometry" to="/mavros/vision_pose/pose" />
+	<node pkg="fast_lio" type="fastlio_mapping" name="laserMapping" output="screen" /> 
+	
+	<group if="$(arg rviz)">
+	<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find fast_lio)/rviz_cfg/loam_livox.rviz" />
+	</group>
+ 
+</launch>

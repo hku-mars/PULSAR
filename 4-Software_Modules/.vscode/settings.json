@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "random": "cpp",
+        "string": "cpp",
+        "core": "cpp",
+        "numericaldiff": "cpp"
+    }
+}

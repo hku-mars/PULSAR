@@ -1,0 +1,3 @@
+[submodule "3-PX4_Firmware/PULSAR_PX4"]
+	path = 3-PX4_Firmware/PULSAR_PX4
+	url = https://github.com/lawrence-cn/PULSAR_PX4

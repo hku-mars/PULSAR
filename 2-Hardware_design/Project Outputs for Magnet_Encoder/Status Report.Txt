@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [Magnet_Encoder.PrjPCB]
+   Generated File[Pick Place for V1.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 14:13:45 On 2022/6/1
