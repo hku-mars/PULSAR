@@ -4,9 +4,7 @@
 
 **Paper Link**: https://www.science.org/doi/epdf/10.1126/scirobotics.ade4538
 
-Click for the overview video.
-
-<!-- [![Video Demo](./img/out.png)](https://www.youtube.com/watch?v=eDkwGXCea7w) -->
+**Video Link**: https://www.youtube.com/watch?v=lrEJnJrRJsQ&t=218s
 
 ## 1 Structure CAD files
 
