@@ -12,12 +12,12 @@ Including the CAD files of PULSAR and the swashplateless mechanism.
 
 ## 2 Hardware deisgn files
 
-Including the hardware design files of the magnetic encoder.
+Including the hardware design files of the magnetic encoder (AS5600).
 
 ## 3 PX4 firmware of PULSAR
 
 ### 3.1 Hardware configuration
-+ Power the magnetic encoder and config it using a I2C bus, and make sure the 910-Hz PWM signal is outputed (e.g., verified by a oscilloscope).
++ Power the magnetic encoder and config it using a I2C bus (please follow the AS5600 datasheet, you can use Arduino or Raspberry Pi or other devices you want, the encoder configuration is not involved in this PX4 firmware), and make sure the 910-Hz PWM signal is outputed (e.g., verified by a oscilloscope).
 + Connect the power port of magnetic encoder to a 5V port of the Pixhawk 4 Mini.
 + Connect the PWM signal of magnetic encoder to the CAP1 port of the Pixhawk 4 Mini.
 + Connect the ESC (off-the-shelf ESC is ok as long as it supports dshot protocol) to the MAIN OUT 1 port of the Pixhawk 4 Mini.
